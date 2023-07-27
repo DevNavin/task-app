@@ -1,0 +1,7 @@
+<main>
+  <header>
+    <h1>Welcome</h1>
+  </header>  
+</main>
+<p *ngIf="tokens">The profile page is only accessible to you after register.</p>
+<p *ngIf="!tokens">You cannot access the profile page after a page reload. </p>

@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+
+	<mat-sidenav #sidenav mode="over">
+		<label>My Task</label> 
+    <hr/>   
+		<nav>
+			<a routerLink="home"      (click)="clickHandler()" routerLinkActive="active">Home</a>
+			<a routerLink="register"     (click)="clickHandler()" routerLinkActive="active">Register</a>
+			<a routerLink="profile"     (click)="clickHandler()" routerLinkActive="active">Profile</a>
+		
+		</nav>
+	</mat-sidenav>
+
+
+	<mat-sidenav-content>
+		<mat-toolbar color="primary">
+			<header>
+				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+				<label>My Task</label>        
+        <nav>
+          <a routerLink="home"    routerLinkActive="active">Home</a>
+          <a routerLink="register"   routerLinkActive="active">Register</a>
+          <a routerLink="profile"   routerLinkActive="active">Profile</a>
+         
+        </nav>        
+      </header>
+		</mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <router-outlet></router-outlet> -->
